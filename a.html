@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query Selector Examples</title>
+  </head>
+  <body>
+    <img src="" alt="" />
+    <img src="" />
+    <img src="" alt="" />
+    <h3 id="heading3">Query Selector Examples</h3>
+
+    <div class="alert">This is an alert!</div>
+    <div class="alert">This is another alert!</div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, esse
+      porro. Explicabo autem magnam delectus debitis doloremque repudiandae quia
+      quod ipsa fugit dolorum, reiciendis unde quasi quae? Porro, voluptatum
+      suscipit?
+    </p>
+    <p>
+      Minus aliquam impedit nemo enim tempora accusantium dolor temporibus,
+      repellat hic praesentium eligendi, odio corporis nulla nostrum illo
+      dolorum vero ratione, debitis magni aut distinctio repudiandae pariatur.
+      Nihil, reprehenderit explicabo.
+    </p>
+    <p>
+      Excepturi nostrum minima eaque eos quis saepe nisi voluptates rerum ad
+      quod id ipsum quia eius a harum delectus magni labore pariatur ducimus,
+      quasi, tempore et eveniet. Officiis, iure exercitationem.
+    </p>
+
+    <script>
+      "use strict";
+
+      let heading3 = document.querySelector("#heading3");
+      heading3.innerText = "Query Selector Use Cases";
+      heading3.style.color = "purple";
+      heading3.style.textTransform = "uppercase";
+
+      let div = document.querySelector(".alert");
+      console.log(div);
+
+      let alertDivs = document.querySelectorAll(".alert");
+      console.log(alertDivs);
+
+      for (const alertDiv of alertDivs) {
+        alertDiv.style.border = "1px solid red";
+        alertDiv.style.padding = "1rem";
+      }
+
+      let paragraphs = document.querySelectorAll("p");
+
+      for (const p of paragraphs) {
+        p.style.backgroundColor = "yellow";
+      }
+
+      //# queries by id
+      //. queries by class
+      // tagname queries by tagname
+    </script>
+  </body>
+</html>

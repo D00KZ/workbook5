@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="imageGroup">
+      <p id="heading">Malik Nabers(R) WR1 #9</p>
+      <p id="info">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, repudiandae architecto voluptates libero
+        ullam alias distinctio expedita quisquam hic aperiam voluptatem eligendi, deserunt quas amet similique esse quia
+        quos, laborum labore. Rem sed officiis iure quas blanditiis pariatur voluptates non?
+      </p>
+      <img src="images/Nabers.png" />
+    </div>
+  </body>
+  <script>
+    let paragraphs = document.querySelectorAll("#heading");
+    for (const paragraph of paragraphs) {
+      paragraph.style.fontSize = "3rem";
+    }
+
+    let infos = document.querySelectorAll("#info")
+    for (const info of infos) {
+        info.style.fontSize = "1.5rem";
+    }
+
+    let photos = document.querySelectorAll("img");
+    for (const photo of photos) {
+      photo.style.borderRadius = "7rem";
+    }
+
+  </script>
+</html>

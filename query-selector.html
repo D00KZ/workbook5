@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query Selector Examples</title>
+  </head>
+  <body>
+    <h3 id="heading3">Query Selector Examples</h3>
+    <div class="alert">This is an alert!</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, esse
+      porro. Explicabo autem magnam delectus debitis doloremque repudiandae quia
+      quod ipsa fugit dolorum, reiciendis unde quasi quae? Porro, voluptatum
+      suscipit?
+    </p>
+    <p>
+      Minus aliquam impedit nemo enim tempora accusantium dolor temporibus,
+      repellat hic praesentium eligendi, odio corporis nulla nostrum illo
+      dolorum vero ratione, debitis magni aut distinctio repudiandae pariatur.
+      Nihil, reprehenderit explicabo.
+    </p>
+    <p>
+      Excepturi nostrum minima eaque eos quis saepe nisi voluptates rerum ad
+      quod id ipsum quia eius a harum delectus magni labore pariatur ducimus,
+      quasi, tempore et eveniet. Officiis, iure exercitationem.
+    </p>
+
+    <script>
+      "use strict";
+      //old school
+      // let heading3 = document.getElementById("heading3");
+      // console.log(heading3);
+
+    //   let alertDivs = document.getElementsByClassName("alert");
+    //   console.log(alertDivs);
+
+      // let paragraphs = document.getElementsByTagName("p");
+      // console.log(paragraphs);
+
+      //new school (it's the new style)
+      let heading3 = document.querySelector("#heading3");
+      console.log(heading3);
+
+      let alertDivs = document.querySelectorAll(".alert");
+      console.log(alertDivs);
+
+      let paragraphs = document.querySelectorAll("p");
+      console.log(paragraphs);
+
+      //# queries by id
+      //. queries by class
+      // tagname queries by tagname
+    </script>
+  </body>
+</html>
