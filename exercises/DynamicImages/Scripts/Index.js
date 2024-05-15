@@ -22,7 +22,7 @@ window.onload = function () {
     for (const imageFile of imageFiles) {
       const option = document.createElement("option");
       option.value = imageFile.id;
-      option.innerText = imageFile.id; //optional 
+      option.innerText = imageFile.id; //optional
       displayDropdown.appendChild(option);
     }
   }
@@ -33,10 +33,25 @@ window.onload = function () {
 
     if (selectedImage) {
       const imageDisplay = document.querySelector("#imageDisplay");
-      imageDisplay.innerHTML = `<img src="${selectedImage.path}" alt="${selectedImage.description}" />`;
+      //   imageDisplay.innerHTML = `<img src="${selectedImage.path}" alt="${selectedImage.description}" />`;
+      let image = document.createElement("img");
+      image.src = selectedImage.path;
+      image.alt = selectedImage.description;
+      image.classList.add("image");
+      //append the child into the parent(put into inside)
+      imageDisplay.appendChild(image);
     }
   }
 
   const displayDropdownButton = document.querySelector("#displayDropdownButton");
-  displayDropdownButton.addEventListener("click", displayImageOptions);
+//   displayDropdownButton.addEventListener("click", displayImageOptions);
+  displayDropdownButton.onclick = displayImageOptions
+
+  function clearDisplayFunction() {
+    const imageDisplay = document.querySelector("#imageDisplay");
+
+    imageDisplay.innerHTML = "";
+  }
+  const clearDisplay = document.querySelector("#clearDisplay");
+  clearDisplay.addEventListener("click", clearDisplayFunction);
 };
