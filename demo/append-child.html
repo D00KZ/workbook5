@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Append Child</title>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <style>
+        main{
+            padding: 5rem;
+        }
+
+        .image{
+            padding: 2rem;
+
+        }
+    </style>
+  </head>
+  <body>
     <main>
-        <div id="imagesContainer"></div>
+      <div id="imagesContainer">
+        <!-- <img src="https://placehold.co/200" alt="placeholder image"  > -->
+      </div>
+      <button id="addImageButton">Add Image</button>
     </main>
     <script>
-        "use strict";
+      "use strict";
 
-        //when this runs you are guarenteeded that all html elements have been loaded 
-        window.onload = function init() {
+      //when this runs you are guarenteed that all html elements have been loaded
+      window.onload = function () {
         //get all your html elements
-        //get the parent
-        let imagesContainer = document.querySelector("#imagesContainer")
-        console.log(imagesContainer);
+        let imagesContainer = document.querySelector("#imagesContainer");
+        let addImageButton = document.querySelector("#addImageButton");
 
-
-        //create the child
-        //append the child into the parent(put into inside)
-
-
-
-
-        
         //define your functions
+        function addImage() {
+          //create the child
+          let image = document.createElement("img");
+          image.src = "https://placehold.co/200";
+          image.alt = "placeholder image";
+          image.classList.add("image")
+          //append the child into the parent(put into inside)
+          imagesContainer.appendChild(image);
+        }
+
         //connect your functions to the html elements
-        };
-
-
+        addImageButton.onclick = addImage;
+      };
     </script>
-</body>
+  </body>
 </html>
